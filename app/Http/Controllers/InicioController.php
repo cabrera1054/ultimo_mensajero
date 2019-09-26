@@ -15,17 +15,6 @@ class InicioController extends Controller
     {
         //
     }
-
-    public function inicio()
-    {
-        return view('home');
-    }
-    public function ola()
-    {
-       
-        
-    }
-
     /**
      * Show the form for creating a new resource.
      *
@@ -91,5 +80,14 @@ class InicioController extends Controller
     public function destroy($id)
     {
         //
+    }
+    public function pantallaInicio()
+    {
+        return view('inicioPlantilla');
+    }
+
+    public function login()
+    {
+        return view('auth.login');
     }
 }

@@ -1,7 +1,9 @@
 <?php
 //Route::get('/', function () { return redirect('/admin/home'); });
+//Route::get('/','HomeController@inicio' );
 
-// Authentication Routes...
+
+// Authentication1 Routes...
 $this->get('login', 'Auth\LoginController@showLoginForm')->name('auth.login');
 $this->post('login', 'Auth\LoginController@login')->name('auth.login');
 $this->post('logout', 'Auth\LoginController@logout')->name('auth.logout');
@@ -27,6 +29,7 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'as' => 'admin.'], 
 
 });
 
-Route::get('/','InicioController@inicio');
+Route::get('/','InicioController@pantallaInicio');
+Route::get('/admin','InicioController@login' );
 //Route::resourse('/usuario','InicioController@ola');
 //Route::get('/usuario','UsarioController@create');
